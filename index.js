@@ -1,12 +1,13 @@
 const nodemailer = require('nodemailer');
-
+const dotenv = require('dotenv');
+dotenv.config();
 // step 1
 
 const transporter = nodemailer.createTransport({
 	service: 'gamil',
 	auth: {
-		user: '',
-		pass: '',
+		user: process.env.EMAIL,
+		pass: process.env.PASSWORD,
 	},
 });
 
