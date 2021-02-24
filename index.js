@@ -4,7 +4,7 @@ dotenv.config();
 // step 1
 
 const transporter = nodemailer.createTransport({
-	service: 'gamil',
+	service: 'gmail',
 	auth: {
 		user: process.env.EMAIL,
 		pass: process.env.PASSWORD,
@@ -16,7 +16,8 @@ const transporter = nodemailer.createTransport({
 let mailOptione = {
 	from: 'chilamakurvishnu@gmail.com',
 	to: 'visshnnutejaa@gmail.com',
-	subjet: 'Testing Nodemailer',
+	cc: 'visshnutejaa1998@gmail.com',
+	subject: 'Testing Nodemailer',
 	text: 'It works',
 };
 
